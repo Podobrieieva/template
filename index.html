@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+	<title>Template</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC25SbLHR2F2WYnX7SxBDSv4PtDH0eSPn0"></script>
+ 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper_reg">
+		<form action="" method="post" name="test" id ="form" class="login-form">
+			<h2>Check in</h2>
+			<!-- <label for="name">Имя:</label> -->
+			<input type="text" name="name" placeholder="Имя" id="name" class="input-login">
+			<!-- <label for="email">Почта</label> -->
+			<input type="text" name="email" placeholder="Введите email" id="email"class="input-login">
+			<!-- <label for="password">Пароль:</label> -->
+			<input type="password" name="password" placeholder="Пароль" id="password" class="input-login">
+			<!-- <label for="password">Проверка пароля:</label> -->
+			<input type="password" name="rePassword" placeholder="Подтвердите пароль" id="rePassword" class="input-login">
+			
+			<input type="radio" name="state" id="male" value="Мужской"> 
+			<label for="male">Мужской</label>
+			<input type="radio" name="state" id="female" value="Женский"> 
+			<label for="female">Женский</label><br><br>
+			<input type="button" onclick="valid(document.getElementById ('form'))" name="submit" class="submit"  value="Готово">
+		</form>
+	</div>
+		<div class="headband wrapper">
+			  	<div class="top_line ">
+			  		<div id="logo">
+			  			<a href="#"><img src="img/logo.png" alt="TANNER" class="img"></a>
+			  		</div>
+			  		<nav class="nav">
+			  			<ul class ="menu">
+			  				<li><a href="#">МАГАЗИН</a></li>
+			  				<li><a href="#">НАШ БРЕНД</a></li>
+			  				<li><a href="#">НАЙТИ МАГАЗИН</a></li>
+			  				<li><a href="#">КОЛЛЕКЦИИ</a></li>
+			  			</ul>
+			  		</nav>
+			  		<div class="hamburger" onclick="toggleMenu();"></div>
+			  		<div class="icon">
+			  			<i class="fas fa-search"></i>
+			  			<i class="fas fa-user" id="reg"></i>
+			  			<i class="fas fa-shopping-cart"></i>
+			  		</div>
+			  	</div>
+			  
+			  <h1>TANNER GOODS</h1>
+			  	  <div class="slide">
+	<div class="multiple-items" >
+	  <div><img src="img/slide1.jpg" alt=""></div>
+	  <div><img src="img/slide2.jpg" alt=""></div>
+	  <div><img src="img/slide3.jpg" alt=""></div>
+	  <div><img src="img/slide4.jpg" alt=""></div>
+	  <div><img src="img/slide5.jpg" alt=""></div>
+	  <div><img src="img/slide6.jpg" alt=""></div>
+	  <div><img src="img/slide7.jpg" alt=""></div>
+	  <div><img src="img/slide8.jpg" alt=""></div>
+	</div>
+	</div>
+			  <h3 id="collection">NEW COLLECTION</h3>
+		
+			
+		</div>
+		</header>
+		<section class="products wrapper">
+			<h2>Популярные модели</h2>
+			<div class="change">
+			</div>
+			<div class="autoplay">
+					<div><img src="img/1.png" alt=""></div>
+	  				<div><img src="img/2.png" alt=""></div>
+	  				<div><img src="img/1.png" alt=""></div>
+	  				<div><img src="img/2.png" alt=""></div>
+				</div>
+			<div class="cards">
+				
+				<figure>
+					<p><img src="img/bag1.jpg" alt=""></p>
+				</figure>
+				<figure>
+					<div class="like"><img src="img/like.png"  alt=""></div>
+					<div class="basket"><img src="img/bag.png"  alt=""></div>
+					<p><img src="img/bag2.jpg"  class="scale"  alt=""></p>
+					<figcaption><p>TANNER GOODS</p><br>
+						<h4>VOYAGER DAYPACK</h4>
+						<p class="price">$300.00</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<div class="like"><img src="img/like.png"  alt=""></div>
+					<div class="basket"><img src="img/bag.png"  alt=""></div>
+					<p><img src="img/bag3.jpg" class="scale1" alt=""></p>
+					<figcaption><p>TANNER GOODS</p><br>
+						<h4>VOYAGER DAYPACK</h4>
+						<p class="price">$300.00</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<p><img src="img/bag4.jpg" alt=""></p>
+				</figure>
+			</div>
+		</section>
+		<section class="about wrapper">
+			<article class="ornament">
+				<p>TANNER GOODS</p>
+				<h2>ОРНАМЕНТЫ</h2>
+				<button type="button" class="orn_more">ПОДРОБНЕЕ</button>
+			</article>
+			<article class="process">
+				<p>TANNER GOODS</p>
+				<h2>ПРОЦЕСС</h2>
+				<button type="button" class="proc_more">ПОДРОБНЕЕ</button>
+			</article>
+		</section>
+		<section class="map wrapper">
+			<p>НАС МОЖНО НАЙТИ</p>
+			<button type="button" class="found">ПОДРОБНЕЕ</button>
+			<div id="map" class="wrapper"></div>
+		</section>
+
+		 
+ 	
+		<section class="new wrapper">
+			<p>ПОДПИШИСЬ НА РАССЫЛКУ<br>
+			и получи скидку 10%</p>
+			<input type="email" id="email_new" placeholder="Введите email">
+		</section>
+		<footer class="wrapper">
+			<div class="networks">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="1" target="#"><i class="fab fa-vk"></i></a>
+				<a href="1" target="#"><i class="fab fa-instagram"></i></a>
+			</div>
+			<div class="info">
+				<p><a href="#">О НАС</a></p>
+				<p><a href="#">МАГАЗИНЫ</a></p>
+				<p><a href="#">КОНТАКТЫ</a></p>
+			</div>
+			<p><i class="fas fa-copyright"></i>2009-2016 Tanner Goods Inc. | Site by Department</p>
+
+		</footer>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 49.988358, lng: 36.232845};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 12
+        });
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Template!'
+        });
+
+        var InfoWindow = new google.maps.InfoWindow({
+        	content: '<h1>Template</h1>'
+        });
+
+      
+        marker.addListener('click', function(event){
+        	  InfoWindow.open(map, marker);
+        })
+      
+      }
+
+    </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwCDTf9GbKKJrCPqNPywkyAfZCLsyFP8&callback=initMap"
+        async defer></script>
+			  <script src="js/index.js"></script>
+	</body>
+	</html>
